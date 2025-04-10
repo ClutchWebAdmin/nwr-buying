@@ -13,7 +13,7 @@ export default function AboutPage() {
             <div className="bg-white text-[#1b2a41] p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-bold mb-2">Chris Blackburn</h2>
               <p className="mb-4">
-                Hello, I am a Gemini, I enjoy long walks in our warehouse, spending quality time reviewing asset lists, and love buying equipment. In my spare time, I explore the recently painful world of investment real estate. My passions include stocks, options, and new inventions. I’m incredibly excited about the future — with software companies and side projects to prove it. I'm also setting up a BFRO branch on the Oregon Coast... email me if you want in.
+                Hello, I am a Gemini, I enjoy long walks in our warehouse, spending quality time reviewing asset lists, and love buying equipment. In my spare time, I explore the recently painful world of investment real estate. My passions include stocks, options, and new inventions. I&apos;m incredibly excited about the future — with software companies and side projects to prove it. I&apos;m also setting up a BFRO branch on the Oregon Coast... email me if you want in.
               </p>
               <p className="font-semibold">Hobbies:</p>
               <p>Real Estate, Investing, Bigfoot Hunting</p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 </h2>
 
               <p className="mb-4">
-                I’ve been with NW Remarketing for over 12 years and love the IT industry. When I’m not providing customer solutions, I enjoy time with my wife and two children. I’m always improving strategies and focused on long-lasting relationships. Reach out with any questions!
+                I’ve been with NW Remarketing for over 12 years and love the IT industry. When I&apos;m not providing customer solutions, I enjoy time with my wife and two children. I&apos;m always improving strategies and focused on long-lasting relationships. Reach out with any questions!
               </p>
               <p className="font-semibold">Hobbies:</p>
               <p>Fishing, Hunting, Bowling, Woodworking</p>
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 </h2>
 
               <p className="mb-4">
-                Native Oregonian and Oregon State grad, I’ve been in telecom sales with NWR for 23 years. I thrive in our fast-paced environment and value strong relationships with customers. Outside work, I enjoy time with family, the outdoors, and sampling Oregon’s best craft brews.
+                Native Oregonian and Oregon State grad, I&apos;ve been in telecom sales with NWR for 23 years. I thrive in our fast-paced environment and value strong relationships with customers. Outside work, I enjoy time with family, the outdoors, and sampling Oregon&apos;s best craft brews.
               </p>
               <p className="font-semibold">Hobbies:</p>
               <p>Family, Fishing, Hunting, Biking, Sampling Brews</p>
