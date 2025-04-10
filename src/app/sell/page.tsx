@@ -2,53 +2,81 @@
 
 import { useState } from 'react'
 
+
 export default function SellPage() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    equipment: '',
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // TODO: hook this into backend or email system
+    console.log('Form submitted:', form)
+    // You can hook into an API here (like Formspree, Google Sheet, EmailJS, etc.)
   }
 
   return (
-    <main style={{ background: 'var(--background)', color: 'var(--foreground)' }} className="min-h-screen py-16 px-4 flex justify-center">
-      <form onSubmit={handleSubmit} className="w-full max-w-xl bg-white p-8 rounded-lg shadow-md space-y-4 border">
-        <h1 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--foreground)' }}>
-          Sell Your Equipment
-        </h1>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          className="w-full p-3 border rounded"
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          className="w-full p-3 border rounded"
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="What are you selling?"
-          rows={4}
-          className="w-full p-3 border rounded"
-          onChange={handleChange}
-          required
-        />
-        <button type="submit" className="w-full bg-[var(--foreground)] text-white p-3 rounded font-bold hover:opacity-90">
-          Submit
-        </button>
-      </form>
+    <main className="min-h-screen bg-[#0b1120] text-white pt-28 px-4 rounded-lg">
+      <section className="max-w-3xl mx-auto bg-white text-[#0b1120] p-8 rounded-lg shadow-md">
+        <h1 className="text-3xl font-bold mb-4 text-center">Sell Your Equipment</h1>
+        <p className="text-center text-gray-600 mb-8">
+          Fill out the form below and our team will get back to you with a custom quote.
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={form.name}
+              onChange={handleChange}
+              className="mt-1 w-full p-3 border border-gray-300 rounded"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              className="mt-1 w-full p-3 border border-gray-300 rounded"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="equipment" className="block text-sm font-medium">What are you selling?</label>
+            <textarea
+              id="equipment"
+              name="equipment"
+              rows={4}
+              value={form.equipment}
+              onChange={handleChange}
+              className="mt-1 w-full p-3 border border-gray-300 rounded"
+              placeholder="Make, model, quantity, etc."
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-[#1b2a41] text-white py-3 px-6 rounded font-semibold hover:bg-opacity-90 transition"
+          >
+            Submit Quote Request
+          </button>
+        </form>
+      </section>
     </main>
   )
 }
