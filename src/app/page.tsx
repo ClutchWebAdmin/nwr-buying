@@ -59,7 +59,9 @@ export default function Home() {
             { name: 'Juniper', src: '/logo-placeholder.png' },
             { name: 'Arista', src: '/logo-placeholder.png' },
             { name: 'HPE', src: '/logo-placeholder.png' },
-            { name: 'Dell', src: '/logo-placeholder.png' }
+            { name: 'Dell', src: '/logo-placeholder.png' },
+            { name: 'Mellanox', src: '/logo-placeholder.png' },
+            { name: 'Ciena', src: '/logo-placeholder.png' },
           ].map((brand) => (
             <div key={brand.name} className="flex flex-col items-center">
               <img
@@ -97,7 +99,7 @@ export default function Home() {
             { title: 'Access Points', img: '/access-point-placeholder.png' },
             { title: 'Transceivers', img: '/transceiver-placeholder.png' },
           ].map(({ title, img }) => (
-            <div key={title} className="bg-foreground rounded-lg text-gray-300 overflow-hidden shadow-sm">
+            <div key={title} className="bg-[rgba(11,17,32)] rounded-lg text-gray-300 overflow-hidden shadow-sm">
               <Image
                 src={img}
                 alt={title}
